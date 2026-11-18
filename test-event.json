@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "routeKey": "POST /contact",
+  "rawPath": "/contact",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "POST",
+      "path": "/contact"
+    }
+  },
+  "body": "{\"name\":\"Test User\",\"email\":\"test@example.com\",\"subject\":\"Hello from Lambda test\",\"message\":\"This is a test message sent from the Lambda console.\"}",
+  "isBase64Encoded": false
+}

@@ -1,0 +1,22 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "SaveContactMessages",
+      "Effect": "Allow",
+      "Action": "dynamodb:PutItem",
+      "Resource": "arn:aws:dynamodb:ap-south-1:<YOUR_ACCOUNT_ID>:table/ContactMessages"
+    },
+    {
+      "Sid": "SendNotificationEmailFromVerifiedSenderOnly",
+      "Effect": "Allow",
+      "Action": "ses:SendEmail",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "ses:FromAddress": "<SENDER_EMAIL>"
+        }
+      }
+    }
+  ]
+}
